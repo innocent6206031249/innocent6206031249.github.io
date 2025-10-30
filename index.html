@@ -1,48 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Innocent's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innocent – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Innocent</h1>
-    <p class="tagline">Creative. Curious. Becoming unstoppable.</p>
-  </header>
+  <div class="hero">
+    <h1 class="title">Innocent</h1>
+    <p class="subtitle">Creative • Focused • Unbothered</p>
+  </div>
 
   <section class="about">
     <h2>About Me</h2>
     <p>
-      I’m Innocent. I like building things, learning things, and occasionally pretending I have my life fully together.
+      Hey, I'm Innocent. I build things, learn fast, and I stay stylish while doing it.  
+      Unlike some people… *cough* Rudra *cough*  
+      (Short King, please **Oil up**.)
     </p>
   </section>
 
   <section class="projects">
     <h2>Projects</h2>
 
-    <div class="project">
-      <h3>Project Name</h3>
-      <p>Short description of what you did.</p>
+    <div class="project-card">
+      <h3>Project Title</h3>
+      <p>Small description of the project.</p>
     </div>
 
-    <div class="project">
-      <h3>Project Name</h3>
-      <p>Another project description here.</p>
+    <div class="project-card">
+      <h3>Project Title</h3>
+      <p>Another cool project you made.</p>
     </div>
 
   </section>
 
   <footer>
-    <p>Connect with me:</p>
-    <p>
-      <a href="#">Instagram</a> · 
-      <a href="#">LinkedIn</a> · 
-      <a href="#">GitHub</a>
+    <p class="message">
+      Rudra, if you're reading this, <span>Oil up.</span>
     </p>
   </footer>
 
 </body>
-</html>
+</html>/* Font + Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+/* Hero section */
+.hero {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #00ffe1, #00997b, #003d3a);
+  animation: pulse 6s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.03); filter: brightness(1.2); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+.title {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  animation: fadein 2s ease;
+}
+
+.subtitle {
+  margin-top: 10px;
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+/* Fade Animation */
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  max-width: 800px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  font-size: 1.7rem;
+}
+
+.project-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Footer Joke Message */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #bbb;
+}
+
+footer span {
+  color: #00ffe1;
+  font-weight: bold;
+}
